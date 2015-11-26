@@ -6,6 +6,7 @@ def dominant(n):
    return result
 
 # counting elements
+# https://codility.com/media/train/2-CountingElements.pdf
 def counting(A, m):
    n = len(A)
    count = [0] * (m + 1)
@@ -14,3 +15,19 @@ def counting(A, m):
    return count
 
 print counting([1,2,3,4], 4);
+
+# Exercise 2.2
+def slow_solution(A, B, m):
+   n = len(A)
+   sum_a = sum(A)
+   sum_b = sum(B)
+   for i in xrange(n):
+      for j in xrange(n):
+         change = B[j] - A[i]
+         sum_a += change
+         sum_b -= change
+         if sum_a == sum_b:
+            return True
+         sum_a -= change
+         sum_b += change
+   return False
