@@ -4,3 +4,6 @@ def dominant(n):
    for i in xrange(n):
       result += 1
    return result
+
+// counting elements
+
