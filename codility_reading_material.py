@@ -14,8 +14,6 @@ def counting(A, m):
       count[A[k]] += 1
    return count
 
-print counting([1,2,3,4], 4);
-
 # Exercise 2.2
 def slow_solution(A, B, m):
    n = len(A)
@@ -57,3 +55,6 @@ def prefix_sums(A):
    for k in xrange(1, n + 1):
       P[k] = P[k - 1] + A[k - 1]
    return P
+
+def count_total(P, x, y):
+   return P[y + 1] - P[x]
