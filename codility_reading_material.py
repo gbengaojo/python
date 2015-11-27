@@ -58,3 +58,14 @@ def prefix_sums(A):
 
 def count_total(P, x, y):
    return P[y + 1] - P[x]
+
+# 3.3
+def mushrooms(A, k, m):
+   n = len(A)
+   result = 0
+   pref = prefix_sums(A)
+   for p in xrange(min(m, k) + 1:
+      left_pos = k - p
+      right_pos = min(n - 1, max(k, k + m - 2 * p))
+      result = max(result, count_total(pref, left_pos, right_pos))
+   for  p in xrange(min(m + 1, n - k
