@@ -1,4 +1,5 @@
 # time complexity
+# 1/5/2016
 def dominant(n):
    result = 0
    for i in xrange(n):
